@@ -74,4 +74,4 @@ npm run dev
 
 ## 7. License
 
-This project is licensed under the **MIT License** — feel free to fork, adapt, translate, and deploy for non-commercial community awareness.
+This project is — feel free to fork, adapt, translate, and deploy for non-commercial community awareness.
