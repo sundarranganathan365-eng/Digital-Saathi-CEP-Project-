@@ -9,6 +9,7 @@ import {
   ExternalLink,
   GraduationCap,
   Sparkles,
+  Github,
 } from 'lucide-react';
 
 interface AboutPageProps {
@@ -47,6 +48,9 @@ const aboutContent = {
       { label: 'Platform Type:', val: 'Client-Side Educational Awareness Resource' },
       { label: 'Access Model:', val: 'Open-Access Public Educational Platform' },
     ],
+    contribTitle: 'Open Source Community & Developer Contributions',
+    contribDesc: 'Digital Saathi is a 100% free public educational system. Developers, researchers, and community members are welcome to contribute new guides, code enhancements, or translations on GitHub.',
+    githubBtn: 'Contribute on GitHub',
     disclaimerTitle: 'Non-Commercial Disclaimer',
     disclaimerDesc: 'Digital Saathi is strictly an independent academic and social awareness initiative. It does not collect user bank details, passwords, or personal credentials. It is not affiliated with any bank, commercial financial company, or government agency.',
   },
@@ -80,6 +84,9 @@ const aboutContent = {
       { label: 'प्लेटफॉर्म प्रकार:', val: 'सार्वजनिक शैक्षणिक जागरूकता वेबसाइट' },
       { label: 'उपलब्धता:', val: 'खुला शैक्षणिक मंच (Open-Access)' },
     ],
+    contribTitle: 'ओपन-सोर्स समुदाय एवं डेवलपर योगदान',
+    contribDesc: 'डिजिटल साथी एक 100% निःशुल्क सार्वजनिक शैक्षणिक प्रणाली है। डेवलपर्स, शोधकर्ता और नागरिक GitHub पर नए अध्ययन गाइड, कोड सुधार या भाषा अनुवाद में योगदान दे सकते हैं।',
+    githubBtn: 'GitHub पर योगदान दें',
     disclaimerTitle: 'गैर-व्यावसायिक अस्वीकरण',
     disclaimerDesc: 'डिजिटल साथी विशुद्ध रूप से एक स्वतंत्र शैक्षणिक और सामाजिक जागरूकता परियोजना है। यह उपयोगकर्ताओं के बैंक विवरण, पासवर्ड या व्यक्तिगत डेटा एकत्र नहीं करता है। यह किसी भी बैंक या सरकारी एजेंसी से संबद्ध नहीं है।',
   },
@@ -113,6 +120,9 @@ const aboutContent = {
       { label: 'व्यासपीठाचा प्रकार:', val: 'सार्वजनिक शैक्षणिक प्रबोधन संकेतस्थळ' },
       { label: 'उपलब्धता:', val: 'मुक्त शैक्षणिक उपक्रम (Open-Access)' },
     ],
+    contribTitle: 'ओपन-सोर्स समुदाय आणि डेव्हलपर योगदान',
+    contribDesc: 'डिजिटल साथी हे १००% मोफत सार्वजनिक शैक्षणिक व्यासपीठ आहे. डेव्हलपर्स, संशोधक आणि नागरिक GitHub वर नवीन मार्गदर्शन, कोड सुधारणा किंवा भाषांतरामध्ये सहभाग घेऊ शकतात.',
+    githubBtn: 'GitHub वर योगदान द्या',
     disclaimerTitle: 'गैर-व्यावसायिक सूचना (अस्वीकरण)',
     disclaimerDesc: 'डिजिटल साथी हा केवळ शैक्षणिक आणि सामाजिक प्रबोधनासाठी तयार केलेला प्रकल्प आहे. येथे कोणतीही बँक माहिती, पासवर्ड किंवा वैयक्तिक माहिती घेतली जात नाही. याचा कोणत्याही बँकेशी किंवा सरकारी यंत्रणेशी व्यावसायिक संबंध नाही.',
   },
@@ -177,6 +187,29 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setCurrentPage, language }
             </div>
           );
         })}
+      </section>
+
+      {/* Open Source Contribution Banner */}
+      <section className="p-8 border border-[#0D5C58]/30 bg-[#0D5C58]/5 rounded-lg space-y-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="space-y-1 max-w-2xl">
+          <div className="flex items-center gap-2">
+            <Github className="w-5 h-5 text-[#0D5C58]" />
+            <h3 className="text-lg font-bold text-[#171717]">{a.contribTitle}</h3>
+          </div>
+          <p className="text-sm text-[#525252] leading-relaxed">
+            {a.contribDesc}
+          </p>
+        </div>
+        <a
+          href="https://github.com/sundarranganathan365-eng/CEP-"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-[#0D5C58] hover:bg-[#094845] text-white font-bold text-sm rounded-md transition-colors shrink-0 shadow-sm"
+        >
+          <Github className="w-4 h-4" />
+          <span>{a.githubBtn}</span>
+          <ExternalLink className="w-4 h-4" />
+        </a>
       </section>
 
       {/* Non Commercial Disclaimer */}
